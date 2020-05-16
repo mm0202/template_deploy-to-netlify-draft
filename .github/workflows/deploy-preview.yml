@@ -5,6 +5,8 @@ on:
     branches-ignore:
       - production
       - staging
+      - master
+      - develop
     tags:
       - '*'
 

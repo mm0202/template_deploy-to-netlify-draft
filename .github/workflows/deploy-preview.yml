@@ -18,6 +18,7 @@ jobs:
 
       - name: build
         run: |
+          mkdir -p public
           echo deploy-preview > public/index.html
           echo `date` >> public/index.html
 

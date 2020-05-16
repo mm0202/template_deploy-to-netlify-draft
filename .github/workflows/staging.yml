@@ -15,6 +15,7 @@ jobs:
 
       - name: build
         run: |
+          mkdir -p public
           echo staging > public/index.html
           echo `date` >> public/index.html
 

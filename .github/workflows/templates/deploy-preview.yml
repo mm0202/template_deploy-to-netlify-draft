@@ -3,10 +3,13 @@ name: deploy-preview
 on:
   push:
     branches-ignore:
-      - production
-      - staging
       - master
       - develop
+      - staging
+      - production
+      - staging-public
+      - production-public
+      - pull-req-preview-public
     tags:
       - '*'
 
@@ -19,10 +22,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: build
-        run: |
-          mkdir -p public
-          echo deploy-preview > public/index.html
-          echo `date` >> public/index.html
+        run: ./build.sh deploy-preview
 
       - name: Commit files
         run: |

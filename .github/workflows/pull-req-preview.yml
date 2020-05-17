@@ -1,12 +1,12 @@
-name: staging
+name: pull-req-preview
 
 on:
-  push:
+  pull_request:
     branches:
       - staging
 
 jobs:
-  staging:
+  pull-req-preview:
 
     runs-on: ubuntu-latest
 
@@ -14,10 +14,10 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: build
-        run: ./build.sh staging
+        run: ./build.sh pull-req-preview
 
       - name: checkout branch for publish
-        run: git checkout -b staging-public
+        run: git checkout -b pull-req-preview-public
 
       - name: Commit files
         run: |

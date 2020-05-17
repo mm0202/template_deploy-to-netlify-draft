@@ -1,5 +1,5 @@
 # template_deploy-to-netlify
-Netlify 向けのデプロイテンプレート。
+Netlify 向けのデプロイテンプレート
 
 ## デプロイ環境
 ### production

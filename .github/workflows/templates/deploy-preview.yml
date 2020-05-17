@@ -1,17 +1,9 @@
 name: deploy-preview
 
 on:
-  push:
-    branches-ignore:
-      - master
-      - develop
+  pull_request:
+    branches:
       - staging
-      - production
-      - staging-public
-      - production-public
-      - pull-req-preview-public
-    tags:
-      - '*'
 
 jobs:
   deploy-preview:

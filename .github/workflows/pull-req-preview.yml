@@ -28,4 +28,3 @@ jobs:
           git commit -m "ci: Automated build push" | exit 0
       - name: push
         run: git push "https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git" --follow-tags -f | exit 0
-
